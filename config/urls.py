@@ -8,8 +8,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path("", include('django_machinelearning.people_counter.urls')),
-    path("", include('django_machinelearning.object_searcher.urls')),
+    path("people-counter/", include('django_machinelearning.people_counter.urls')),
+    path("object-searcher/", include('django_machinelearning.object_searcher.urls')),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
 ]
